@@ -1,0 +1,48 @@
+﻿wyvern_siege_event = {
+	scope = character
+	
+	is_shown = {
+	}
+	effect = {
+
+	}
+	is_valid = {
+		any_army = {
+			is_army_in_siege = yes
+			army_is_moving = no
+			is_army_in_combat = no
+		}
+		OR = {
+			number_maa_regiments_of_type = {
+				type = alpi
+				value > 0
+			}
+			number_maa_regiments_of_type = {
+				type = crimson
+				value > 0
+			}
+			number_maa_regiments_of_type = {
+				type = beaker
+				value > 0
+			}
+			number_maa_regiments_of_type = {
+				type = swamper
+				value > 0
+			}
+		}
+		not = {
+			exists = var:wyvern_siege_cooldown
+		}
+	}
+
+	effect = {
+		root = {
+			trigger_event = mma_siege.0001
+		}
+		set_variable = { #cooldown
+			name = wyvern_siege_cooldown
+			value = yes
+			days = 180
+		}
+	}
+}

@@ -1,0 +1,928 @@
+﻿namespace = giants
+
+giants.0001 = { ###selection
+	type = character_event
+	title = giants.0001.t
+	desc = giants.0001.desc
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = personality_cynical
+	}
+	override_background = { event_background = fp1_beached_longships }
+
+	option = { #large host
+		name = giants.0001.a
+		remove_short_term_gold = 150
+
+		add_character_flag = large_host
+
+		trigger_event = {
+			id = giants.0002
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -40
+				short_term_gold >= medium_gold_value
+			}
+		}
+	}
+
+	option = { #medium host
+		name = giants.0001.b
+		remove_short_term_gold = 75
+
+		add_character_flag = medium_host
+		trigger_event = {
+			id = giants.0002
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = -40
+				short_term_gold >= medium_gold_value
+			}
+		}
+	}
+
+	option = { #small host
+		name = giants.0001.c
+		remove_short_term_gold = 25
+
+		add_character_flag = small_host
+		trigger_event = {
+			id = giants.0002
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = compassionate
+			}
+		}
+	}
+
+	option = { #regret
+		name = giants.0001.d
+	}
+}
+
+giants.0002 = { ###village on the way ask why you keep giants
+	title = giants.0002.t
+	desc = {
+		desc = giants.0002.desc.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = large_host
+				}
+				desc = giants.0002.desc.large
+			}
+				triggered_desc = {
+				trigger = {
+					has_character_flag = medium_host
+				}
+				desc = giants.0002.desc.medium
+			}
+				triggered_desc = {
+				trigger = {
+					has_character_flag = small_host
+				}
+				desc = giants.0002.desc.small
+			}
+		}
+		desc = giants.0002.desc.ending
+	}
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = admiration
+	}
+	override_background = { event_background = market_tribal }
+
+	option = { #raze 
+		name = giants.0002.a
+		add_gold = 55
+
+			random_list = {
+				95 = {
+					
+				}
+				5 = {
+					add_trait = reaver
+				}
+			}
+		trigger = {
+			OR = {
+				has_character_flag = large_host
+				has_character_flag = medium_host
+			}
+		}
+			trigger_event = {
+			id = giants.0003
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 5
+			modifier = {
+				add = 70
+				OR = {
+					has_trait = callous
+					has_trait = paranoid
+					has_trait = sadistic
+					has_trait = wrathful
+				}
+			}
+		}
+	}
+	option = { #comfortable
+		name = giants.0002.b
+
+		trigger = {
+			OR = {
+				has_character_flag = small_host
+			}
+		}
+		add_character_flag = giant_help
+			trigger_event = {
+			id = giants.0003
+			days = { 7 14 }
+		}
+		custom_tooltip = giants.0002.help
+				ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = compassionate
+			}
+		}
+
+	}
+	option = { #pay
+		name = giants.0002.c
+		remove_short_term_gold = 75
+		add_character_flag = giant_help
+			trigger_event = {
+			id = giants.0003
+			days = { 7 14 }
+		}
+		custom_tooltip = giants.0002.help
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #walk past
+		name = giants.0002.d
+		trigger_event = {
+			id = giants.0003
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0003 = { ###which way to search
+	title = giants.0003.t
+	desc = {
+		desc = giants.0003.desc.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = giant_help
+				}
+				desc = giants.0003.desc.help
+			}
+		}
+	}
+
+	theme = alliance	
+	right_portrait = {
+		character = ROOT
+		animation = personality_rational	
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #search mountains
+		name = giants.0003.a
+		trigger_event = {
+			id = giants.0004
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #follow river
+		name = giants.0003.b
+		trigger_event = {
+			id = giants.0007
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0004 = { ###mountain path 1
+	title = giants.0004.t
+	desc = giants.0004.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	override_background = { event_background = wilderness_mountains }
+
+
+	option = { #search the area
+		name = giants.0004.a
+			trigger_event = {
+			id = giants.0005
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #go deeper into the mountains
+		name = giants.0004.b
+			trigger_event = {
+			id = giants.0006
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0005 = { ###mountain path 2 search
+	title = giants.0005.t
+	desc = giants.0005.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	override_background = { event_background = wilderness_mountains }
+
+
+	option = { #keep skulls
+		name = giants.0005.a
+		add_character_modifier = {
+			modifier = giant_skulls
+		}
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = no
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #go deeper
+		name = giants.0005.b
+			trigger_event = {
+			id = giants.0006
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0006 = { ###stumpe upon giants village
+	title = giants.0006.t
+	desc = giants.0006.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = schadenfreude	
+	}
+	override_background = { event_background = wilderness_mountains }
+
+
+	option = { #
+		name = giants.0006.a
+			add_character_flag = might
+			trigger_event = {
+			id = giants.0010
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #
+		name = giants.0006.b
+			add_character_flag = gifts
+			trigger_event = {
+			id = giants.0010
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0007 = { ###river path 1
+	title = giants.0007.t
+	desc = giants.0007.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #upstream
+		name = giants.0007.a
+		trigger_event = {
+			id = giants.0008
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = { #go up the mountain path
+		name = giants.0007.b
+			trigger_event = {
+			id = giants.0009
+			days = { 7 14 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0008 = { ###upstream - meeting giants
+	title = giants.0008.t
+	desc = giants.0008.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = schadenfreude
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #meet
+		name = giants.0008.a
+		add_character_flag = might
+		trigger_event = {
+			id = giants.0010
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = giants.0008.b
+		add_character_flag = gifts
+		trigger_event = {
+			id = giants.0010
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0009 = { ###mountain path river 2
+	title = giants.0009.t
+	desc = giants.0009.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = personality_rational
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #spend last resources
+		name = giants.0009.a
+		custom_tooltip = giants.0009.tooltip.a
+		if = {
+			trigger = {
+				has_character_flag = large_host
+			}
+			remove_character_flag = large_host
+			add_character_flag = medium_host
+		}
+		else_if = {
+			trigger = {
+				has_character_flag = medium_host
+			}
+			remove_character_flag = medium_host
+			add_character_flag = small_host
+		}
+		trigger_event = {
+			id = giants.0010
+			days = { 5 12 }
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #head back
+		name = giants.0009.b
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = no
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+giants.0010 = { #the meeting and show
+	title = giants.0010.t
+	desc = {
+		desc = giants.0010.desc.opening
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = might
+				}
+				desc = giants.0010.desc.might
+			}
+				triggered_desc = {
+				trigger = {
+					has_character_flag = gifts
+				}
+				desc = giants.0010.desc.gifts
+			}
+		}
+	}
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = war_over_win	
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+	option = { #enslavement
+		name = giants.0010.a
+			trigger = {
+				has_character_flag = might
+			}
+			trigger_event = {
+			id = giants.0012
+			days = { 2 7 }
+		}
+	}
+	
+	option = { #duel
+		name = giants.0010.b	
+			trigger = {
+				has_character_flag = might
+			}
+
+		duel = {
+			skill = martial
+			value = average_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 30
+				}
+				desc = giant.success
+				send_interface_toast = {
+					title = giant.success
+					add_prestige = 100
+				}
+				hidden_effect = {
+					trigger_event = giants.0011
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+					min = -8
+				}
+				desc = giant.fail
+				send_interface_toast = {
+					title = giant.fail
+					add_prestige = -150
+					add_trait = wounded_2	
+				}
+				hidden_effect = {
+					trigger_event = giants.0014
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				OR = {
+					martial >= high_skill_rating
+					has_trait = brave
+				}
+			}
+		}
+	}
+
+	option = { #give gifts
+		name = giants.0010.c
+			trigger = {
+				has_character_flag = gifts
+			}
+		add_character_flag = gifts_reward
+		remove_short_term_gold = 250
+		trigger_event = giants.0013
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #duel diplomacy
+		name = giants.0010.d
+			trigger = {
+				has_character_flag = gifts
+			}
+
+		duel = {
+			skill = diplomacy
+			value = average_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 30
+				}
+				desc = giant.success
+				send_interface_toast = {
+					title = giant.success
+					add_prestige = 50
+				}
+				hidden_effect = {
+					trigger_event = giants.0013
+					add_character_flag = diplomacy
+					} 
+				}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+					min = -8
+				}
+				desc = giant.fail
+				send_interface_toast = {
+					title = giant.fail
+					add_prestige = -75
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				OR = {
+					diplomacy >= high_skill_rating
+					has_trait = gregarious
+				}
+			}
+		}
+	}
+	option = {
+		name = giants.0010.e
+		add_prestige = 50
+		add_character_modifier = {
+			modifier = seen_giants
+		}
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = no
+		}
+		add_character_flag = visited_giants
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+
+giants.0011 = { ###duel win
+	title = giants.0011.t
+	desc = {
+		random_valid = {
+				desc = giants.0011.desc.a
+				desc = giants.0011.desc.b
+				desc = giants.0011.desc.c
+				desc = giants.0011.desc.d
+			}
+		}
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = war_over_win
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #reward
+		name = giants.0011.a
+		spawn_army = {
+			men_at_arms = {
+				type = giant
+				stacks = 3
+			}
+			location = root.capital_province
+			origin = scope:leader.capital_province
+			name = giants.troop
+		}
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = no
+		}
+		add_character_flag = visited_giants
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+giants.0012 = { ###enslave
+	title = giants.0012.t
+	desc = giants.0012.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = war_defender
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #soldiers
+		name = giants.0012.a
+		spawn_army = {
+			men_at_arms = {
+				type = giant
+				stacks = 1
+			}
+			location = root.capital_province
+			origin = scope:leader.capital_province
+			name = giants.troop
+		}
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = no
+		}
+		add_character_flag = enslaved_giants
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = { #enlsave for building
+		name = giants.0012.b
+		capital_county = {
+			add_county_modifier = {
+				modifier = enslave_giants
+				years = 50
+			}
+		}
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = no
+		}
+		add_character_flag = enslaved_giants
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+giants.0013 = { ###gifts or convince reward
+	title = giants.0013.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_flag = diplomacy
+				}
+				desc = giants.0013.desc.diplomacy
+			}
+			triggered_desc = {
+				trigger = {
+					has_character_flag = gifts_reward
+				}
+				desc = giants.0013.desc.gifts
+			}
+		}
+	}
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = apersonality_rational
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #soldiers
+		name = giants.0013.a
+		spawn_army = {
+			men_at_arms = {
+				type = giant
+				stacks = 2
+			}
+			location = root.capital_province
+			origin = scope:leader.capital_province
+			name = giants.troop
+		}
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = no
+		}
+		add_character_flag = visited_giants
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+giants.0014 = { ###duel lose
+	title = giants.0014.t
+	desc = giants.0014.desc
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = shame
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #defeat
+		name = giants.0014.a
+
+		remove_character_flag = giant_help
+		remove_character_flag = large_host
+		remove_character_flag = medium_host
+		remove_character_flag = small_host
+		remove_character_flag = might
+		remove_character_flag = gifts
+		remove_character_flag = gifts_reward
+		remove_character_flag = diplomacy
+		scope:activity = {
+			complete_activity = yes
+		}
+		add_character_flag = visited_giants
+
+		add_character_modifier = {
+			modifier = seen_giants
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+giants.0015 = { ###revisit
+	title = giants.0015.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = giants.0015.third.desc
+				trigger = {
+					has_character_flag = third_visit
+				}
+			}
+			desc = giants.0015.desc
+		}
+	}		
+
+	theme = alliance
+	right_portrait = {
+		character = ROOT
+		animation = personality_cynical
+	}
+	override_background = { event_background = wilderness_forest_pine }
+
+
+	option = { #deal
+		name = giants.0015.a
+		spawn_army = {
+			men_at_arms = {
+				type = giant
+				stacks = 1
+			}
+			location = root.capital_province
+			origin = scope:leader.capital_province
+			name = giants.troop
+		}
+		scope:activity = {
+			complete_activity = no
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = { #no thanks
+		name = giants.0015.b
+
+		scope:activity = {
+			complete_activity = no
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = { #adventurer
+		name = giants.0015.c
+		trigger = {
+			has_character_flag = third_visit
+		}
+		
+		add_trait = adventurer
+
+		scope:activity = {
+			complete_activity = no
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	after = {
+		add_character_flag = third_visit
+	}
+}

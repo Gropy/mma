@@ -1,0 +1,499 @@
+﻿namespace = valkyrie
+
+valkyrie.0001 = { ###start
+	type = character_event
+	title = valkyrie.0001.t
+	desc = valkyrie.0001.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_bold
+	}
+
+	right_portrait = {
+		character = scope:priest
+		animation = admiration
+	}
+
+	override_background = { event_background = temple_scope }
+
+	immediate = {
+		hidden_effect = {
+				cp:councillor_court_chaplain = {
+				save_scope_as = priest
+			}
+		}
+	}
+
+	option = { #odin
+		name = valkyrie.0001.a
+
+		trigger_event =  valkyrie.0003
+		custom_tooltip = valkyrie.0001.tooltip.a
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #thor
+		name = valkyrie.0001.b
+
+		trigger_event =  valkyrie.0004
+		custom_tooltip = valkyrie.0001.tooltip.b
+
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+valkyrie.0003 = { ###odin
+	type = character_event
+	title = valkyrie.0003.t
+	desc = valkyrie.0003.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_zealous	
+	}
+
+	override_background = { event_background = temple_scope }
+
+	immediate = {
+		hidden_effect = {
+				cp:councillor_court_chaplain = {
+				save_scope_as = priest
+			}
+		}
+	}
+
+	option = { #odin
+		name = valkyrie.0003.a
+
+		duel = {
+			skill = learning
+			value = average_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 30
+				}
+				desc = odin.success
+				send_interface_toast = {
+					title = odin.success
+					add_piety = 75
+				}
+				change_variable = {
+					name = hunt_outcome
+					add = 2
+				}
+				hidden_effect = {
+					trigger_event = valkyrie.0005
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+					min = -8
+				}
+				desc = odin.fail
+				send_interface_toast = {
+					title = hunt.4003.c.tt_failure
+					add_piety = -100
+					add_trait = possessed_1
+					}
+				change_variable = {
+					name = hunt_outcome
+					add = -2
+				}
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				learning >= high_skill_rating
+			}
+		}
+	}
+		option = { #go back
+		name = valkyrie.0003.b
+
+		scope:activity = {
+			complete_activity = no
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+
+valkyrie.0004 = { ###thor
+	type = character_event
+	title = valkyrie.0004.t
+	desc = valkyrie.0004.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_zealous	
+	}
+
+	override_background = { event_background = temple_scope }
+
+	option = { #odin
+		name = valkyrie.0004.a
+
+		duel = {
+			skill = martial
+			value = average_skill_rating
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 30
+				}
+				desc = odin.success
+				send_interface_toast = {
+					title = odin.success
+					add_prestige = 100
+				}
+				hidden_effect = {
+					if = {
+						limit = { 
+							any_spouse = {
+								is_ai = yes
+							}
+						}
+						trigger_event = valkyrie.0007
+					}
+					else_if = {
+						limit = { 
+							any_child = {
+								is_ai = yes
+							}
+						}
+						trigger_event = valkyrie.0009
+					}
+					else_if = {
+						trigger_event = valkyrie.0010
+					}
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = 1
+					min = -8
+				}
+				desc = odin.fail
+				send_interface_toast = {
+					title = odin.fail
+					add_prestige = -150
+					add_trait = wounded_2	
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				martial >= high_skill_rating
+			}
+		}
+	}
+
+		option = { #go back
+		name = valkyrie.0004.b
+
+		scope:activity = {
+			complete_activity = no
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+
+valkyrie.0005 = { ###odins demands
+	type = character_event
+	title = valkyrie.0005.t
+	desc = valkyrie.0005.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	right_portrait = {
+		character = scope:priest
+		animation = personality_cynical	
+	}
+
+	override_background = { event_background = temple_scope }
+
+	immediate = {
+		hidden_effect = {
+				cp:councillor_court_chaplain = {
+				save_scope_as = priest
+			}
+		}
+		add_trait = one_eyed
+	}
+
+	option = { #eye
+		name = valkyrie.0005.a
+
+		hidden_effect = {
+			trigger_event = { 
+				id = valkyrie.0006
+				days = { 13 21 }
+			 }
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+valkyrie.0006 = { ###reward
+	type = character_event
+	title = valkyrie.0006.t
+	desc = valkyrie.0006.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	
+	immediate = {
+		hidden_effect = {
+				cp:councillor_court_chaplain = {
+				save_scope_as = priest
+			}
+		}
+	}
+
+	override_background = { event_background = temple_scope }
+
+	option = { #eye
+		name = valkyrie.0006.a
+
+		spawn_army = {
+			men_at_arms = {
+				type = valkyrie
+				stacks = 1
+			}
+			location = root.capital_province
+			origin = scope:leader.capital_province
+			name = valkyrie_odin_troops
+		}
+
+		scope:activity = {
+			complete_activity = no
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+valkyrie.0007 = { ###thors demands
+	type = character_event
+	title = valkyrie.0007.t
+	desc = valkyrie.0007.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	right_portrait = {
+		character = scope:spouse
+		animation = personality_cynical	
+	}
+
+	override_background = { event_background = temple_scope }
+
+	immediate = {
+		hidden_effect = {
+				cp:councillor_court_chaplain = {
+				save_scope_as = priest
+			}
+				random_spouse = {
+				save_scope_as = spouse
+			}
+		}
+	}
+
+	option = { #wife
+		name = valkyrie.0007.a
+
+			scope:spouse = {
+			death = {
+				death_reason = death_sacrificed_to_gods
+			}
+		}
+			hidden_effect = {
+				trigger_event = { 
+					id = valkyrie.0008
+					days = { 13 21 }
+				}
+			}
+			
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #regret
+		name = valkyrie.0007.b
+
+		scope:activity = {
+			complete_activity = no
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+valkyrie.0008 = { ###reward thor
+	type = character_event
+	title = valkyrie.0008.t
+	desc = valkyrie.0008.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	override_background = { event_background = temple_scope }
+
+	option = { #eye
+		name = valkyrie.0008.a
+
+		spawn_army = {
+			men_at_arms = {
+				type = valkyrie
+				stacks = 1
+			}
+			location = root.capital_province
+			origin = scope:leader.capital_province
+			name = valkyrie_thor_troops
+		}
+
+		scope:activity = {
+			complete_activity = no
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+valkyrie.0009 = { ###thors demands child
+	type = character_event
+	title = valkyrie.0009.t
+	desc = valkyrie.0009.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	right_portrait = {
+		character = scope:child
+		animation = personality_cynical	
+	}
+
+	override_background = { event_background = temple_scope }
+
+	immediate = {
+		hidden_effect = {
+				cp:councillor_court_chaplain = {
+				save_scope_as = priest
+			}
+				random_child = {
+				save_scope_as = child
+			}
+		}
+	}
+
+	option = { #child
+		name = valkyrie.0009.a
+
+		scope:child = {
+			death = {
+				death_reason = death_sacrificed_to_gods
+			}
+		}
+
+		trigger_event = valkyrie.0008
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #regret
+		name = valkyrie.0009.b
+
+		scope:activity = {
+			complete_activity = no
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+valkyrie.0010 = { ###thors demands body
+	type = character_event
+	title = valkyrie.0010.t
+	desc = valkyrie.0010.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_rational	
+	}
+
+	override_background = { event_background = temple_scope }
+
+
+	option = { #child
+		name = valkyrie.0010.a
+
+		add_trait = weak
+
+		trigger_event = valkyrie.0008
+
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	option = { #regret
+		name = valkyrie.0010.b
+
+		scope:activity = {
+			complete_activity = no
+		}
+
+		ai_chance = {
+			base = 50
+		}
+	}
+}

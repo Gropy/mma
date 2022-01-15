@@ -1,0 +1,24 @@
+﻿mma_animals = {
+	default = mma_animals_enabled
+
+	mma_animals_enabled = {
+	
+	}
+	
+	mma_animals_disabled = {
+	
+	}
+	
+}
+
+mma_fantasy = {
+	default = mma_fantasy_enabled
+
+	mma_fantasy_enabled = {
+
+	}
+
+	mma_fantasy_disabled = {
+
+	}
+}

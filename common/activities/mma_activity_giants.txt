@@ -1,0 +1,111 @@
+﻿
+activity_giants = {
+	solo = yes
+	
+	color = { 0.253906 0.867188 0.105469 1 }
+
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+
+	}
+
+	on_activate = {
+		activity_owner = {
+			trigger_event = giants.0001
+		}
+	}
+
+	on_expire = {
+
+	}
+	
+	on_complete = {
+		
+	}
+	
+	on_invalidated = {
+		
+	}
+}
+
+activity_giants_revisit = {
+	solo = yes
+	
+	color = { 0.253906 0.867188 0.105469 1 }
+
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+
+	}
+
+	on_activate = {
+		activity_owner = {
+			trigger_event = {
+			id = giants.0015
+			days = { 14 40 }
+			}
+		}
+	}
+
+	on_expire = {
+
+	}
+	
+	on_complete = {
+		
+	}
+	
+	on_invalidated = {
+		
+	}
+}
+
+activity_valkyrie = {
+	solo = yes
+	
+	color = { 0.253906 0.867188 0.105469 1 }
+
+	valid = {
+		activity_owner = {
+			is_alive = yes
+			is_imprisoned = no
+		}
+	}
+	on_spawn = {
+		invite_character_to_activity = activity_owner
+		accept_invitation_for_character = activity_owner
+
+	}
+
+	on_activate = {
+		activity_owner = {
+			trigger_event = valkyrie.0001
+		}
+	}
+
+	on_expire = {
+
+	}
+	
+	on_complete = {
+		
+	}
+	
+	on_invalidated = {
+		
+	}
+}

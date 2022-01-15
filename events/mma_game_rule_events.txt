@@ -1,0 +1,44 @@
+﻿namespace = mma_gamerule
+
+###Animals
+mma_gamerule.1 = {
+
+	type = empty
+	
+	hidden = yes
+	
+	trigger = {
+		has_game_rule = mma_animals_enabled
+		NOT = { exists = global_var:mma_animals_enabled }
+	}
+
+	immediate = {
+
+		set_global_variable = {
+			name = mma_animals_enabled
+			value = yes
+		}
+
+	}
+}
+
+###fantasy
+mma_gamerule.2 = {
+
+	type = empty
+	
+	hidden = yes
+	
+	trigger = {
+		has_game_rule = mma_fantasy_enabled
+		NOT = { exists = global_var:mma_fantasy_enabled }
+	}
+
+	immediate = {
+
+		set_global_variable = {
+			name = mma_fantasy_enabled
+			value = yes
+		}
+	}
+}

@@ -1,0 +1,28 @@
+﻿###Men at Arms definitions
+
+wolves = {
+	alias = { wolf }
+	parent = men_at_arms
+}
+
+dragons = {
+	alias = { dragon }
+	parent = men_at_arms
+}
+
+###Activities
+
+giants = {
+	texture = "gfx/interface/icons/activities/activity_giants.dds"
+	parent = activity
+}
+
+giants_revisit = {
+	texture = "gfx/interface/icons/activities/activity_giants_revisit.dds"
+	parent = activity
+}
+
+valkyrie = {
+	texture = "gfx/interface/icons/activities/activity_valkyrie.dds"
+	parent = activity
+}

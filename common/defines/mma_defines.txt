@@ -1,0 +1,4 @@
+﻿
+NMercenary = {
+	SKIP_CULTURAL_CHANCE = { 0.8 0.7 0.6 }	# The chance that we skip including a cultural MaA in a merc company
+}

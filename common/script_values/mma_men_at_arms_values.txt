@@ -1,0 +1,235 @@
+﻿######################
+# Men-at-Arms Values #
+######################
+
+culture_ai_weight_e_wolves = {
+	value = 0
+	
+	if = { 
+		limit = {
+			culture = {
+
+					has_innovation = innovation_e_wolves
+			}
+		}
+		add = 5
+	}
+}
+
+culture_ai_weight_wolves = {
+	value = 0
+	
+	if = { 
+		limit = {
+			culture = {
+				OR = {
+					has_innovation = innovation_wolves
+				}
+			}
+		}
+		add = 5
+	}
+}
+
+culture_ai_weight_alpi = {
+	value = 0
+	
+	if = { 
+		limit = {
+			OR = {
+				culture_group = culture_group:central_germanic_group
+				culture_group = culture_group:frankish_group
+				culture_group = culture_group:iberian_group
+				culture_group = culture_group:latin_group
+				culture_group = culture_group:byzantine_group
+			}
+		}
+		add = 20
+	}
+
+
+	if = { 
+		limit = {
+			culture = {
+				OR = {
+					has_innovation = innovation_alpi
+				}
+			}
+		}
+		add = 15
+	}
+}
+
+culture_ai_weight_beaker = {
+	value = 0
+	
+	if = { 
+		limit = {
+			culture = {
+				OR = {
+					has_innovation = innovation_beaker
+				}
+			}
+		}
+		add = 25
+	}
+}
+
+culture_ai_weight_crimson = {
+	value = 0
+	
+	if = { 
+		limit = {
+			OR = {
+				culture_group = culture_group:frankish_group
+			}
+		}
+		add = 10 
+	}
+
+	if = { 
+		limit = {
+			culture = {
+				OR = {
+					has_innovation = innovation_crimson
+				}
+			}
+		}
+		add = 15
+	}
+}
+
+culture_ai_weight_swamper = {
+	value = 0
+	
+	if = { 
+		limit = {
+			culture = {
+				OR = {
+					has_innovation = innovation_swamper
+				}
+			}
+		}
+		add = 20
+	}
+}
+
+culture_ai_weight_militia = {
+	value = 0
+	
+	if = { # Cultures that favours skirmishers
+		limit = {
+			OR = {
+				culture_group = culture_group:baltic_group
+				culture_group = culture_group:ugro_permian_group
+				culture_group = culture_group:balto_finnic_group
+			}
+		}
+		add = 20
+	}
+
+	if = { # Cultures that dislike skirmishers
+		limit = {
+			OR = {
+				culture_group = culture_group:central_germanic_group
+				culture_group = culture_group:frankish_group
+				culture_group = culture_group:iberian_group
+				culture_group = culture_group:latin_group
+				culture_group = culture_group:byzantine_group
+			}
+		}
+		add = -70
+	}
+
+	if = { # Cultures that favours light cavalry
+		limit = {
+			OR = {
+				culture_group = culture_group:arabic_group
+				culture_group = culture_group:iranian_group
+				culture_group = culture_group:berber_group
+				culture_group = culture_group:iberian_group
+				culture_group = culture_group:west_slavic_group
+				culture_group = culture_group:indo_aryan_group
+			}
+		}
+		add = -80
+	}
+
+	if = { # Cultures that dislike heavy cavalry
+		limit = {
+			OR = {
+				culture_group = culture_group:tibetan_group
+				culture_group = culture_group:baltic_group
+				culture_group = culture_group:south_slavic_group
+				culture_group = culture_group:sahelian_group
+				culture_group = culture_group:senegambian_group
+				culture_group = culture_group:west_african_group
+				culture_group = culture_group:yoruba_group
+				culture_group = culture_group:somalian_group
+				culture_group = culture_group:east_african_group
+				culture_group = culture_group:burman_group
+			}
+		}
+		add = -60
+	}
+}
+
+
+culture_ai_weight_wolves = {
+	value = 0
+	
+	if = { 
+		limit = {
+			culture = {
+				OR = {
+					has_innovation = innovation_wolves
+				}
+			}
+		}
+		add = 10
+	}
+}
+
+culture_ai_weight_english_longbowmen = {
+	value = 0
+	
+	if = { 
+		limit = {
+			OR = {
+				culture = culture:anglo_saxon
+				culture_group = culture_group:brythonic_group
+				culture_group = culture_group:west_germanic_group
+				culture = culture:scottish
+				culture = culture:irish
+			}
+		}
+		add = 30
+	}
+}
+
+culture_ai_weight_german_hammers = {
+	value = 0
+	
+	if = { 
+		limit = {
+			OR = {
+				culture_group = culture_group:central_germanic_group
+			}
+		}
+		add = 60
+	}
+}
+
+culture_ai_weight_scottish_pikes = {
+	value = 0
+	
+	if = { 
+		limit = {
+			OR = {
+				culture = culture:scottish
+			}
+		}
+		add = 80
+	}
+}
+

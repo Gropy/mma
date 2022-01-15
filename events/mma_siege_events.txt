@@ -1,0 +1,143 @@
+﻿namespace = mma_siege
+# army_camp					[event:/SFX/Events/Backgrounds/camp_generic_day]
+
+
+mma_siege.0001 = {
+	type = character_event
+	title = mma_siege.0001.t
+	desc = mma_siege.0001.desc
+	theme = martial	
+
+	override_background = { event_background = wyvern_event }
+
+	immediate = {
+		ordered_army = {
+			is_army_in_siege = yes
+			army_is_moving = no
+			is_army_in_combat = no
+			number_maa_regiments_of_base_type = {
+				type = dragons
+				value > 0
+			}
+			save_scope_as = sieging_army
+		}
+	}
+
+
+
+
+
+	option = {
+		name = mma_siege_a_0001.desc
+		custom_tooltip = mma_siege_tooltip_0001.desc
+
+
+		trigger = {
+			scope:sieging_army = {
+				army_owner = {
+					number_maa_regiments_of_base_type = {
+						type = dragons
+						value > 0
+					}
+				}
+			}
+		}
+
+
+		scope:sieging_army.location.county = {
+			add_county_modifier = {
+				modifier = wyvern_siege_leftover
+				years = 5
+			}
+		}
+		hidden_effect = {
+			scope:sieging_army = {
+				army_owner = {
+					add_character_modifier = {
+						modifier = wyvern_siege_1
+						days = 3
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mma_siege_b_0001.desc
+		add_piety = -50
+		custom_tooltip = mma_siege_tooltip_0001.desc
+
+
+		trigger = {
+			scope:sieging_army = {
+				army_owner = {
+					number_maa_regiments_of_base_type = {
+						type = dragons
+						value > 0
+					}
+				}
+			}
+		}
+
+
+		scope:sieging_army.location.county = {
+			add_county_modifier = {
+				modifier = wyvern_siege_leftover
+				years = 15
+			}
+		}
+		hidden_effect = {
+			scope:sieging_army = {
+				army_owner = {
+					add_character_modifier = {
+						modifier = wyvern_siege_2
+						days = 3
+						hide = yes
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mma_siege_c_0001.desc
+		add_piety = -250
+		custom_tooltip = mma_siege_tooltip_0001.desc
+
+
+		trigger = {
+			scope:sieging_army = {
+				army_owner = {
+					number_maa_regiments_of_base_type = {
+						type = dragons
+						value > 0
+					}
+				}
+			}
+		}
+
+
+		scope:sieging_army.location.county = {
+			add_county_modifier = {
+				modifier = wyvern_siege_leftover
+				years = 40
+			}
+		}
+		hidden_effect = {
+			scope:sieging_army = {
+				army_owner = {
+					add_character_modifier = {
+						modifier = wyvern_siege_3
+						days = 3
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mma_siege_d_0001.desc
+		remove_variable	 = wyvern_siege_cooldown
+	}
+}
+

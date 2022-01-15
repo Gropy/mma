@@ -1,0 +1,218 @@
+﻿@wolves = "gfx/interface/icons/culture_innovations/innovation_wolves.dds"
+@wyvern = "gfx/interface/icons/culture_innovations/innovation_wyverns.dds"
+
+innovation_wolves = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_wolves
+	icon = @wolves
+
+	potential = {
+		has_game_rule = mma_animals_enabled
+	}
+	
+	unlock_maa = wolves_unit
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_e_wolves = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_e_wolves
+	icon = @wolves
+
+	potential = {
+		has_game_rule = mma_animals_enabled
+	}
+	
+	unlock_maa = e_wolves
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_beaker = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_beaker
+	icon = @wyvern
+
+	potential = {
+		has_game_rule = mma_fantasy_enabled
+	}
+	
+	unlock_maa = beaker
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_crimson = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_crimson
+	icon = @wyvern
+
+	potential = {
+		has_game_rule = mma_fantasy_enabled
+	}
+	
+	unlock_maa = crimson
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_swamper = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_swamper
+	icon = @wyvern
+
+	potential = {
+		has_game_rule = mma_fantasy_enabled
+	}
+	
+	unlock_maa = swamper
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_alpi = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_alpi
+	icon = @wyvern
+
+	potential = { 
+		has_game_rule = mma_fantasy_enabled
+	}
+
+	unlock_maa = alpi
+	#unlock_building = wyvern_01
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+berserker_viking_tradition = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	icon = gfx/interface/icons/culture_innovations/innovation_hird.dds
+
+	potential = {
+		has_fp1_dlc_trigger = yes
+		has_game_rule = mma_fantasy_enabled
+		OR = {
+			# North Germanic
+			this = culture:norse
+			this = culture:swedish
+			this = culture:norwegian
+			this = culture:danish
+
+			# Frankish
+			this = culture:norman
+		}
+	}
+
+	unlock_maa = berserker
+	unlock_maa = skulleaters
+
+	flag = global_maa
+}
+
+innovation_english_longbowmen = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_europe_west_britannia
+	icon = gfx/interface/icons/culture_innovations/innovation_weapons_and_armor_01.dds
+	
+	potential = {
+		OR = {
+			this = culture:anglo_saxon
+			this.culture_group = culture_group:brythonic_group
+			this.culture_group = culture_group:west_germanic_group
+			this = culture:scottish
+			this = culture:irish
+		}
+	}
+
+	unlock_maa = english_longbowmen
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_german_hammers = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_europe_west_germania
+	icon = gfx/interface/icons/culture_innovations/innovation_weapons_and_armor_02.dds
+
+	potential = {
+		has_game_rule = mma_fantasy_enabled
+		this.culture_group = culture_group:central_germanic_group
+	}
+
+	unlock_maa = german_hammers
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_greek_fire = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_beaker
+	icon = gfx/interface/icons/culture_innovations/innovation_siege_weapons.dds
+
+	potential = {
+		has_game_rule = mma_fantasy_enabled
+	}
+
+	unlock_maa = greek_fire
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_heavy_crossbowmen = {
+	group = culture_group_regional
+	culture_era = culture_era_high_medieval
+	icon = gfx/interface/icons/culture_innovations/innovation_weapons_and_armor_01.dds
+
+	unlock_maa = heavy_crossbowmen
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_scottish_pikes = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	icon = gfx/interface/icons/culture_innovations/innovation_maa_01.dds
+
+	potential = {
+		this = culture:scottish
+	}
+
+	unlock_maa = scottish_pikes
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_assassins = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_camels
+	icon = gfx/interface/icons/culture_innovations/innovation_administration_02.dds
+
+	unlock_maa = assassins
+
+	flag = global_regional
+	flag = tribal_era_regional
+}

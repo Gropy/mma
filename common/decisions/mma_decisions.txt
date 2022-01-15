@@ -1,0 +1,191 @@
+﻿seek_giants.0001 = { #seek the giants in scandi mouuntains
+	picture = "gfx/interface/illustrations/decisions/giants_decision.dds"
+
+	desc = seek_giants.0001_desc
+	selection_tooltip = seek_giants.0001_tooltip
+
+	cooldown = { years = 3 }
+
+	is_shown = {
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = {
+				OR = {
+					geographical_region = world_europe_north
+					geographical_region = world_europe_west_britannia
+					geographical_region = world_europe_west_germania
+
+				}
+			}
+		}
+		NOT = {
+			OR = {
+				has_character_flag = visited_giants
+				has_character_flag = enslaved_giants
+			}
+		}
+		has_game_rule = mma_fantasy_enabled
+	}	
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		capital_province = {
+			spawn_activity = {
+				type = activity_giants
+				owner = root
+			}
+		}
+		custom_tooltip = giants.0001_effect_tooltip
+	}
+
+	cost = {
+		prestige = 300
+	}
+
+	ai_check_interval = 360
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 30
+		modifier = {
+			add = 60
+			OR = {
+				has_trait = ambitious
+				has_trait = brave
+				has_trait = viking
+			}
+		}
+		modifier = {
+			add = -15
+			has_trait = shy
+		}
+	}
+}
+
+revisit_giants.0001 = { #seek the giants in scandi mouuntains
+	picture = "gfx/interface/illustrations/decisions/giants_decision.dds"
+
+	desc = revisit_giants.0001_desc
+	selection_tooltip = revisit_giants.0001_tooltip
+
+	cooldown = { years = 6 }
+
+	is_shown = {
+		is_landed = yes
+		any_held_title = {
+			tier = tier_county
+			title_province = {
+				OR = {
+					geographical_region = world_europe_north
+					geographical_region = world_europe_west_britannia
+					geographical_region = world_europe_west_germania
+
+				}
+			}
+		}
+		has_character_flag = visited_giants
+		has_game_rule = mma_fantasy_enabled
+	}	
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		capital_province = {
+			spawn_activity = {
+				type = activity_giants_revisit
+				owner = root
+			}
+		}
+		custom_tooltip = revisit_giants.0001_effect_tooltip
+	}
+
+	cost = {
+		gold = 200
+	}
+
+	ai_check_interval = 360
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 20
+	}
+}
+
+seek_valkyrie.0001 = { #seek the giants in scandi mouuntains
+	picture = "gfx/interface/illustrations/decisions/valkyrie_decision.dds"
+
+	desc = seek_valkyrie.0001_desc
+	selection_tooltip = seek_valkyrie.0001_tooltip
+
+	cooldown = { years = 4 }
+		
+    is_shown = {		
+			religion = religion:germanic_religion
+		    has_game_rule = mma_fantasy_enabled
+	}
+
+	is_valid = {
+	    religion = religion:germanic_religion 
+        faith = { has_doctrine = tenet_bhakti }
+		faith = { has_doctrine = tenet_gruesome_festivals }
+        prestige_level >= high_prestige_level
+	    piety_level >= medium_piety_level
+		OR = { 
+			has_trait = viking
+			has_trait = berserker
+			has_trait = zealous
+			has_trait = faith_warrior
+		}
+		NOT = {
+			has_trait = cynical
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+	}
+
+	effect = {
+		custom_tooltip = valkyrie.0001_effect_tooltip
+		capital_province = {
+			spawn_activity = {
+				type = activity_valkyrie
+				owner = root
+			}
+		}
+	}
+
+	cost = {
+		piety = 750
+	}
+
+	ai_check_interval = 360
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 15
+		modifier = {
+			add = 75 
+			has_trait = zealous
+		}
+		modifier = {
+			add = 20
+			has_trait = brave
+		}
+	}
+}

@@ -1,0 +1,45 @@
+﻿#Modifiers granted from pet animals
+
+
+giant_skulls = {
+	icon = giants_positive
+	martial = 1
+	dread_baseline_add = 5
+	general_opinion = 5
+}
+
+enslave_giants = {
+	icon = giants_positive
+	build_speed = -0.2
+	build_gold_cost = -0.1
+}
+
+seen_giants = {
+	icon = giants_positive
+	martial = 1
+	prowess = 2
+	general_opinion = 5
+}
+
+##### Siege modifiers
+
+wyvern_siege_1 = {
+	icon = dragon_positive
+	dragons_siege_value_add = 10
+}
+
+wyvern_siege_2 = {
+	icon = dragon_positive
+	dragons_siege_value_add = 17
+}
+
+wyvern_siege_3 = {
+	icon = dragon_positive
+	dragons_siege_value_add = 30
+}
+
+wyvern_siege_leftover = {
+	icon = dragon_negative
+	garrison_size = -0.25
+	development_growth_factor = -0.1
+}
