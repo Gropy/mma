@@ -1,0 +1,12 @@
+﻿l_english:
+rule_mma_animals:0 "#G MMA: #!Animals"
+setting_mma_animals_enabled:0 "Enabled Animal Units"
+setting_mma_animals_enabled_desc:0 "Animals such as wolves will be recuitable."
+setting_mma_animals_disabled:0 "Disable Animal Units"
+setting_mma_animals_disabled_desc:0 "No animals will be available to recuit for battle."
+
+rule_mma_fantasy:0 "#G MMA: #!Fantasy"
+setting_mma_fantasy_enabled:0 "Enable Fantasy Units"
+setting_mma_fantasy_enabled_desc:0 "The different kind of Wyverns in the world will be available, this also includes special decision units."
+setting_mma_fantasy_disabled:0 "Disable Fantasy Units"
+setting_mma_fantasy_disabled_desc:0 "Nothing considered fantasy will be included in the game."

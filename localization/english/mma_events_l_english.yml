@@ -1,0 +1,159 @@
+﻿l_english:
+ valkyrie.0001.t:0 "Arrival"
+ valkyrie.0001.desc:0 "As I enter our temple in [ROOT.Char.GetCapitalLocation.GetTitle.GetNameNoTier] I see the main room already prepared, candles are lit and the animal sacrifice has already been given.\n\n"I have already started the connection with the gods my [ROOT.Char.GetLadyLord]" [priest.GetTitledFirstName] says "Now all that remains is for you to decide which god we shall seek favor with, please come forth and yell their name""
+ valkyrie.0001.a:0 ""ODIN THROUGH WISDOM LEND ME WARRIORS""
+ valkyrie.0001.b:0 ""THOR THROUGH MY MIGHT GIVE ME WARRIORS""
+ valkyrie.0001.tooltip.a:0 "#weak This will test your learning skill and requires an offering to odin.#!"
+ valkyrie.0001.tooltip.b:0 "#weak This will test your martial skill and requires an offering to thor.#!"
+
+ valkyrie.0003.t:0 "Odins Tests"
+ valkyrie.0003.desc:0 "As I yell for Odin's favor a raven outside squawks repeatedly, slowly other of its kind join in, the noise becomes louder and louder; as noise begins to screech in my ears, my eyes starts to burn.\n\nSuddenly illusions flash through my mind, images of a giant tree, a huge worm, a bridge of multiple colors, warriors in a great hall; all appear as the pain continues.\n\nNow I need to try to process it all." 
+ valkyrie.0003.a:0 "I will understand."
+ valkyrie.0003.b:0 "This has to stop now!"
+
+ valkyrie.0004.t:0 "Thors Tests"
+ valkyrie.0004.desc:0 "When I finished yelling - the room suddenly grew cold and [priest.GetTitledFirstName] moved up to me; his eyes completely pale. Yet as I studied [priest.GetHerHim], [priest.GetSheHe] grabbed my arms with unnatural strength and started almost wrestling me.\n\nBefore I knew it we were on the ground and it became a match of raw muscle power."
+ valkyrie.0004.a:0 "I will overpower that which possesses [priest.GetTitledFirstName]."
+ valkyrie.0004.b:0 "I will find an opportunity to make it out!"
+ odin.success:0 "You continue your quest"
+ odin.fail:0 "All is lost"
+
+ valkyrie.0005.t:0 "Odins Demand"
+ valkyrie.0005.desc:0 "As I fall on my knees - the pain, the screams, the images, all of it has stopped, yet my left eye's vision is gone.\n\nStanding over me is [priest.GetFirstName] "I'm not sure how to interpret this [ROOT.Char.GetFirstName], but your eye has gone completely pale, something has happened...""
+ valkyrie.0005.a:0 "Now we wait."
+ 
+ valkyrie.0006.t:0 "Odins Reward"
+ valkyrie.0006.desc:0 "As we dine in the hall [priest.GetTitledFirstName] storms in and yells "It has happened! They have come! Outside the temple, hurry!"\n\nI and the folk who were present all ran like mad towards the temple, and there; true enough; did ten valkyries hover over the ground like tales of old.\n\nAs people continued to gather, the valkyries turned towards the crowd and aimed their swords towards my lost eye. The one in the middle called out in a smooth voice "Pray for us in battle and we will appear."\n\nAnd just like that, they were gone again."
+ valkyrie.0006.a:0 "Odin has granted me his favor!"
+ valkyrie_odin_troops:0 "Odins Favor"
+
+ valkyrie.0007.t:0 "Thors Demand"
+ valkyrie.0007.desc:0 "My muscles have become completely sore as I struggle to maintain my breath; but it seems like I finally subdued whatever was inside [priest.GetTitledFirstName], now [priest.GetSheHe] just lies on the ground, looking up into the ceiling.\n\nTime passes, candles fade out, the darkness grows around us - before finally [priest.GetTitledFirstName]s pale body screams out "You've done well, grant me your other half, and you'll have your wish.""
+ valkyrie.0007.a:0 "I accept your demands."
+ valkyrie.0007.b:0 "This is too much!"
+
+ valkyrie.0008.t:0 "Thors Reward"
+ valkyrie.0008.desc:0 "As we dine in the hall [priest.GetTitledFirstName] storms in and yells "It has happened! They have come! Outside the temple, hurry!"\n\nI and the folk who were present all ran like mad towards the temple, and there; true enough; did ten valkyries hover over the ground like tales of old.\n\nAs people continued to gather, the valkyries turned towards the crowd and aimed their swords towards me. The one in the middle called out in a smooth voice "Pray for us in battle and we will appear."\n\nAnd just like that, they were gone again."
+ valkyrie.0008.a:0 "Thor has given me warriors!"
+ valkyrie_thor_troops:0 "Thors Favor"
+
+ valkyrie.0009.t:0 "Thors Demand"
+ valkyrie.0009.desc:0 "My muscles have become completely sore as I struggle to maintain my breath; but it seems like I finally subdued whatever was inside [priest.GetTitledFirstName], now [priest.GetSheHe] just lies on the ground, looking up into the ceiling.\n\nTime passes, candles light out, the darkness grows around us - before finally [priest.GetTitledFirstName]s pale body screams out "You've done well, grant me your younger self, and you'll have your wish.""
+ valkyrie.0009.a:0 "I accept your demands."
+ valkyrie.0009.b:0 "This is too much!"
+
+ valkyrie.0010.t:0 "Thors Demand"
+ valkyrie.0010.desc:0 "My muscles have become completely sore as I struggle to maintain my breath; but it seems like I finally subdued whatever was inside [priest.GetTitledFirstName], now [priest.GetSheHe] just lies on the ground, looking up into the ceiling.\n\nTime passes, candles light out, the darkness grows around us - before finally [priest.GetTitledFirstName]s pale body screams out "You've done well, grant me your body, and you'll have your wish.""
+ valkyrie.0010.a:0 "I accept your demands."
+ valkyrie.0010.b:0 "This is too much!"
+
+#Giants
+
+ giants.troop:0 "Mountain Giants" 
+
+ giants.0001.t:0 "The Journey"
+ giants.0001.desc:0 "I need to decide on how many companions I want to bring on my journey. I could bring a large unit of soldiers, or go for a lighter team for cheap and quick travel.\n\nMyself and my court don't know much about the giants, so either approach could work."
+ giants.0001.a:0 "A big stack of soldiers shall provide me safety."
+ giants.0001.b:0 "An average size of soldiers should be fine."
+ giants.0001.c:0 "A small number of companions shall accompany me."
+ giants.0001.d:0 "I won't leave anyway."
+
+ giants.0002.t:0 "The Village"
+ giants.0002.desc.opening:0 "As I and my companions make our way across the seas and forests; following sagas, guides, and stories to find the giants, we come across one of the villages mentioned in a local tale.\n\n"
+ giants.0002.desc.large:0 "With my large party of soldiers we can try to raze and sack the village, giving us the supplies we need on our way."
+ giants.0002.desc.medium:0 "With my pack of soldiers, we can try to root out the villagers and raze their houses from all their loot and supplies."
+ giants.0002.desc.small:0 "Due to our small size, the residents have approached us and offered us their assistance and safe passage."
+ giants.0002.desc.ending:0 "\n\nNow as we make our way towards it, we have to decide how we approach this village."
+ giants.0002.a:0 "Raze it!"
+ giants.0002.b:0 "Safe passage."
+ giants.0002.c:0 "Pay for knowledge and safety."
+ giants.0002.d:0 "Curious, let's move on."
+ giants.0002.help:0 "#weak They might have insightful information on the giants.#!"
+
+ giants.0003.t:0 "The Road"
+ giants.0003.desc.opening:0 "As we leave the dense forest, we come across a great meadow with a clear path cutting two ways - either we follow the road down the river, or go up between the trees towards the mountains."
+ giants.0003.desc.help:0 "\n\nThe residents we came across explained to us that their trade with the giants usually comes from the mountain path. Perhaps that is the quickest."
+ giants.0003.a:0 "Mountain path."
+ giants.0003.b:0 "River path."
+
+ giants.0004.t:0 "Mountain Path"
+ giants.0004.desc:0 "We've been walking up the tree-filled mountain side for several days now, until today when our scouts have spotted an unusual formation beyond a hill, perhaps we should spend a few days investigating it.
+ giants.0004.a:0 "Search the area."
+ giants.0004.b:0 "Keep going."
+
+ giants.0005.t:0 "The Search"
+ giants.0005.desc:0 "Our scouts have spotted what seems to be a graveyard of giants, containing both full skeletons of them, and corpses still containing flesh lay around in an inhuman large pit.\n\nJust having seen the giants would be a tale at home, so maybe we should bring back a few of the skulls."
+ giants.0005.a:0 "Return home."
+ giants.0005.b:0 "Move on."
+
+ giants.0006.t:0 "Mountain Path"
+ giants.0006.desc:0 "While we were resting something astonishing happened, a creature, looking similar but twice the size of a human appeared. After a few interactions from each other, we seemed to have created a mutual and friendly attitude. We shared what we were cooking on the fire with the creature, and he pointed us deeper into the mountains.\n\nNow we have to decide how we approach the other giants when we meet his village."
+ giants.0006.a:0 "Approach with might."
+ giants.0006.b:0 "Approach with gifts."
+
+ giants.0007.t:0 "River Path"
+ giants.0007.desc:0 "As we follow up the river next to the mountain, we come across another cut in our path. Now I, as the leader, have to decide which way we go."
+ giants.0007.a:0 "Continue upstream."
+ giants.0007.b:0 "Head towards the mountains."
+
+ giants.0008.t:0 "The Stream"
+ giants.0008.desc:0 "Finally our journey seems at an end, my front soldiers have reported a sighting up ahead. They've painted a legendary image in our head, explaining that just up the river stood two humanlike creatures at over twice the size of a normal soldier and barely covered - they were standing in the river and seemed to try to catch any fish crossing them."
+ giants.0008.a:0 "Approach with might."
+ giants.0008.b:0 "Approach with gifts."
+
+ giants.0009.t:0 "Mountain Path"
+ giants.0009.desc:0 "Days upon days have gone by, and we've yet to see any trace of giants, or even another village. Now I'm left with a tough decision - we're running out of supplies, so do I keep searching or spend the last resources to head back?"
+ giants.0009.a:0 "Keep going."
+ giants.0009.b:0 "Head home."
+ giants.0009.tooltip.a:0 "#weak (your party will be downgraded).#!"
+
+ giants.0010.t:0 "The Meeting"
+ giants.0010.desc.opening:0 "The time has come, before us stand the giants of legends. Yet, they seem more primitive than suggested, communication has been back and forth; yet slow."
+ giants.0010.desc.might:0 "\n\nWe need to show them our might and a reason to join us, perhaps a duel? Or try to enslave them."
+ giants.0010.desc.gifts:0 "\n\nWe need to show them a reason to join us, perhaps great gifts will convince them; or we can try to convince them with primitive diplomacy."
+ giants.0010.a:0 "Forceful enslavement!"
+ giants.0010.b:0 "Duel the challenger."
+ giants.0010.c:0 "Great gifts!"
+ giants.0010.d:0 "Try to convince them."
+ giants.0010.e:0 "Just seeing them is enough."
+ giant.success:0 "You win the duel"
+ giant.fail:0 "You lose the duel"
+
+ giants.0011.t:0 "The Duel"
+ giants.0011.desc.a:0 "I stand in the crude village of the giants, around me gather my men and the locals in a circle. I stand in the middle of it facing a being twice my size, yet somehow I have to defeat this foe and show my might.\n\nI hold just my shortsword, with it I run directly towards the creature. It doesn't seem prepared for my charge, and as I approach it, it sways its hands around trying to grab me. A quick dive below it allows me to avoid getting caught, and using my sword I do two quick slashes at both its ankles. While I tumble away from it, I hear a crash behind me and just like that, it is over."
+ giants.0011.desc.b:0 "I stand in the crude village of the giants, around me gather my men and the locals in a circle. I stand in the middle of it facing a being twice my size, yet somehow I have to defeat this foe and show my might.\n\nWith just a shortbow in my hands I began loading an arrow, and as I started to pull on the string the giant facing me started moving its enormous legs. With just instinct and precision, one arrow flew, two arrows flew, and three arrows flew. And just like that, the giant crashed in front of me, it had an arrow in its eye, neck and chest.\n\nThe fight was over, and the other giants didn't seem angry; a mutual respect was found"
+ giants.0011.desc.c:0 "I stand in the crude village of the giants, around me gather my men and the locals in a circle. I stand in the middle of it facing a being twice my size, yet somehow I have to defeat this foe and show my might.\n\nThey bleed just like any other creature, I thought as I grabbed my axe tight and stared down the giant. Just like any other foe I started running face first towards it, and at the same time it started moving its enormous legs as well. The giant then began stretching its hand towards me, and as soon as we made contact I rammed my axe into its palm. As it started shoving me back, I grabbed my side knife, spun my body around and towards it. As soon as I could I stabbed the beast in the neck as it fell down towards me.\n\nJust like that it was over, the other giants didn't seem angry; a mutual respect was found."
+ giants.0011.desc.d:0 "I stand in the crude village of the giants, around me gather my men and the locals in a circle. I stand in the middle of it facing a being twice my size, yet somehow I have to defeat this foe and show my might.\n\nWith a trusty spear in hand, I stood fast as the giant started moving its enormous legs towards me. Standing in the outer part of the ring, I rammed the spear into the chest of the beast as it approached me. But just that wasn't enough, and my entire body started sliding backwards as the giant kept moving forward. After a couple of meters I used my other hand to take a spear from a soldier who was watching us. The giant wasn't ready for it, because in mere seconds I had the spear up its throat.\n\nJust like that it was over, the other giants didn't seem angry; a mutual respect was found."
+ giants.0011.a:0 "The giants follow us home."
+
+ giants.0012.t:0 "The Aftermatch"
+ giants.0012.desc:0 "This could have gone better, the giants are strong creatures, and didn't let us capture them easily. Yet before me lies my victory - and several corpses of both humans and giants.\n\nWhat's left of my party has managed to subdue a dozen giants, now we’ll head home with them. While on the way I have a chance to decide what to do with our captures."
+ giants.0012.a:0 "Use them in battles."
+ giants.0012.b:0 "Use them for construction."
+
+ giants.0013.t:0 "The Aftermatch"
+ giants.0013.desc.diplomacy:0 "It seems like after many geturess and half understood conversation with body language and painting on rocks, that the giants took heart of my intentions. It seems clear to me that they want to join us, as they have begun clearing their crude village.\n\nNow I return home with my party and over two dozen giants."
+ giants.0013.desc.gifts:0 "It seems my gifts have gotten to them, I bought them several of my golden items, salted meat, skulls of several animals and even fur snitched together in their village - to fit their large body.\n\nNow as they start clearing their crude village they have decided to join us, and I return home with over two dozen giants."
+ giants.0013.a:0 "Time to return home!"
+
+ giants.0014.t:0 "The Defeat"
+ giants.0014.desc:0 "It seems like even with my best effort, I've been defeated; I managed to jump out of the makeshift arena just before the giant would have crushed me to death. It seems like my party gives me no blame, and even the creatures are humble about it as well. I’ve decided to stay here for a few days, and then we'll return home with a legend to tell!"
+ giants.0014.a:0 "Time to return home!"
+
+ giants.0015.t:0 "Revisit"
+ giants.0015.desc:0 "After a few weeks of retracing our tracks from last time, I arrived at the giants village again. With both parties' best attempt at communication, it seems like we've come to the conclusion that in exchange for our treasures and food - will be able to hire some of the giant's soldiers."
+ giants.0015.third.desc:0 "After a few weeks of retracing our tracks from last time, I arrived at the giants village again. With both parties' best attempt at communication, it seems like we've come to the conclusion that in exchange for our treasures and food - will be able to hire some of the giant's soldiers."
+ giants.0015.a:0 "Make the deal."
+ giants.0015.b:0 "No thanks."
+ giants.0015.c:0 "I've become an adventurer"
+
+###siege events
+ mma_siege.0001.t:0 "Wyvern Assault"
+ mma_siege.0001.desc:0 "You have the option to attack the enemies holding, with your Wyverns in your army. Enacting this command will surely hurt the enemies morale, and therefore increase our chance to capture the fort.\n\nAn attack like this does not come without consequences, the garrison and land will be damaged.The severity of our attack will depend on the number of Wyverns we sent out.\n\nThe assault will only last a couple of days, and the Wyverns need a period of resting after."
+ mma_siege_a_0001.desc:0 "hurrass the defenders with some Wyverns."
+ mma_siege_b_0001.desc:0 "Unleash the Wyverns on the fort."
+ mma_siege_c_0001.desc:0 "Assault with every Wyvern!"
+ mma_siege_d_0001.desc:0 "Perhaps this isn't the best idea."
+ mma_siege_tooltip_0001.desc:0 "#italic You'll start an assault on the fort, it will only last a couple of days.#  #weak Effects will only work if Wyverns are in the siege#"
+
+

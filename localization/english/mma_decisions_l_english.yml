@@ -1,0 +1,22 @@
+﻿l_english:
+#valkyrie decision
+ seek_valkyrie.0001:0 "Seek Valkyries"
+ seek_valkyrie.0001_desc:0 "My [GetPlayer.GetCouncillorPosition( 'councillor_court_chaplain' ).GetPositionName] has told me stories about how the gods would sent down beings to rescue and fight alongside men.\n\nNow they have found a way for us to summon them as well, but at a steep price."
+ seek_valkyrie.0001_tooltip:0 "Seek Valkyries"
+ valkyrie.0001_effect_tooltip:0 "Chance to obtain [heavy_infantry|E] Valkyries\n#weak (Note: This can go wrong, will test your attributes and cost something important to you)#!"
+ seek_valkyrie.0001_confirm:0 "To the temple!"
+
+#Giants decision
+ seek_giants.0001:0 "Seek Giants"
+ seek_giants.0001_desc:0 "Go out and seek the giants of the scandinavian mountain range, this will obviously require great effort and cunning, and might not always prevail. But the reward will be mense!"
+ seek_giants.0001_tooltip:0 "Seek Giants"
+ giants.0001_effect_tooltip:0 "Chance to obtain [heavy_infantry|E] Giants\n#weak (Note: This can go wrong and will test your attributes)#!"
+ seek_giants.0001_confirm:0 "To the boats!"
+
+ revisit_giants.0001:0 "Revisit Giants"
+ revisit_giants.0001_desc:0 "I can go out on another expedition and try to locate the giants again, this time it should be smoother and easier to find them, and perhaps I can recruit more of them."
+ revisit_giants.0001_tooltip:0 "Revisit Giants"
+ revisit_giants.0001_effect_tooltip:0 "Chance to obtain [heavy_infantry|E] Giants"
+ revisit_giants.0001_confirm:0 "To the boats!"
+
+  

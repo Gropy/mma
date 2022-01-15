@@ -1,0 +1,15 @@
+﻿l_english:
+ activity_giants:0 "Expedition"
+ activity_giants_name:0 "Expedition"
+ activity_giants_desc:0 "#D Out travelling and stuff.#!"
+ activity_giants_owner:0 "Traveller"
+
+ activity_giants_revisit:0 "Expedition"
+ activity_giants_revisit_name:0 "Expedition"
+ activity_giants_revisit_desc:0 "#D Out travelling and stuff.#!"
+ activity_giants_revisit_owner:0 "Traveller"
+
+ activity_valkyrie:0 "Expedition"
+ activity_valkyrie_name:0 "Expedition"
+ activity_valkyrie_desc:0 "#D Out travelling and stuff.#!"
+ activity_valkyrie_owner:0 "Traveller"

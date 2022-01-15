@@ -1,0 +1,23 @@
+﻿l_english:
+
+ giant_skulls:0 "Skulls of Giants"
+ giant_skulls_desc:0 "This character has several skulls of giants on display."
+
+ enslave_giants:0 "Enslaved Giants"
+ enslave_giants_desc:0 "This province benefits from a dozen giants who help in construction work."
+
+ seen_giants:0 "Seen Giants"
+ seen_giants_desc:0 "This character has brought home tales of giants living among the mountains."
+
+ ###siege modifiers
+ wyvern_siege_1:0 "Wyvern Assault"
+ wyvern_siege_1_desc:0 "This character is launching a wyvern assault on a fort."
+
+ wyvern_siege_2:0 "Wyvern Assault"
+ wyvern_siege_2_desc:0 "This character is launching a wyvern assault on a fort."
+ 
+ wyvern_siege_3:0 "Wyvern Assault"
+ wyvern_siege_3_desc:0 "This character is launching a wyvern assault on a fort."
+
+ wyvern_siege_leftover:0 "Wyvern devastation"
+ wyvern_siege_leftover_desc:0 "The population of this area have been wreckt by Wyverns, either deliberately or accidentally."
